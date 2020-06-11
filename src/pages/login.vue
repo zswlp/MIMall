@@ -1,4 +1,4 @@
 <template>
-<div>我是登录页面</div>
+<div>我是登录页面1</div>
     
 </template>
