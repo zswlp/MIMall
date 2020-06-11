@@ -1,8 +1,12 @@
 <template>
-    <div>11q</div>
+  <div>
+detail
+  </div>
 </template>
 <script>
-export default {
-    
-}
+
+  export default{
+    name:'detail'
+   
+  }
 </script>
