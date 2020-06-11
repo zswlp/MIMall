@@ -1,3 +1,4 @@
-<template lang="pug">
+<template>
+<div>111</div>
     
 </template>
