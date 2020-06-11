@@ -4,14 +4,23 @@ import router from './router'
 import App from './App.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+
 // import env from "./env"
+
+// mock
+// 定义开关
+const mock = false;
+if (mock) {
+
+    require('./mock/api')
+}
+// 根据前端的跨域方式做调整
+axios.defaults.baseURL = '/api'
+axios.defaults.timeout = 8000;
 // 拦截器
 // axios.defaults.baseURL = env.baseURL;
 axios.interceptors.response.use(function(response) {
     let res = response.data;
-    // 根据前端的跨域方式做调整
-    axios.defaults.baseURL = '/api'
-    axios.defaults.timeout = 8000;
     // 根据环境变量来获取不同的请求地址
     // 没错误返回0  错误·拦截
     if (res.status == 0) {
