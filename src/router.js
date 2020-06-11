@@ -9,7 +9,7 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home,
-            redirect: '/index',
+            // redirect: '/index',
             children: [{
                 path: '/index',
                 name: 'index',
@@ -65,7 +65,7 @@ export default new Router({
                     path: 'alipay',
                     name: 'alipay',
                     component: () =>
-                        import ('./pages/alipay.vue')
+                        import ('./pages/alipay')
                 }
             ]
         }
