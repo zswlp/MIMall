@@ -116,7 +116,7 @@
 </template>
 <script>
 export default {
-    name:'nav-header'
+    name:'nav-header',
 
 }
 </script>
