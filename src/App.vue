@@ -31,9 +31,9 @@ export default {
     // })
 // 第三种
 // 本地集成mockjs实现数据mock
-   this.axios.get('/user/login').then((res)=>{
-         this.res=res;
-    });
+  //  this.axios.get('/user/login').then((res)=>{
+  //        this.res=res;
+  //   });
 
     // 从上往下认证
   //  storage.setItem('a',1)
@@ -43,6 +43,8 @@ export default {
   
 }
 </script>
-
+<style>
+@import './assets/scss/reset.scss'
+</style>
 
 
