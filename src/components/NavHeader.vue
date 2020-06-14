@@ -9,9 +9,10 @@
           <a href="javescript:;">协议规则</a>
         </div>
         <div class="topbar-user">
-          <a href="javescript:;">登录</a>
-          <a href="javescript:;">注册</a>
-          <a href="javescript:;" class="my-cart"
+          <a href="javescript:;" v-if='username'>{{username}}</a>
+          <a href="javescript:;" v-if="!username" @click="login">登录</a>
+          <a href="javescript:;" v-if='username'>我的订单</a>
+          <a href="javescript:;" class="my-cart" @click='goToCart'
             ><span class="icon-cart"></span>购物车</a
           >
         </div>
@@ -37,7 +38,8 @@
                       <img :src="item.mainImage" alt="" />
                     </div>
                     <div class="pro-name" v-text="item.name"></div>
-                    <div class="pro-price">{{ item.price|currency }}</div></a>
+                    <div class="pro-price">{{ item.price | currency }}</div></a
+                  >
                 </li>
               </ul>
             </div>
@@ -136,6 +138,7 @@ export default {
     },
   },
   methods: {
+    login(){ this.$router.push('/login')},
     getProductList() {
       this.axios
         .get("/products", {
@@ -145,10 +148,18 @@ export default {
           },
         })
         .then((res) => {
+          if (res.list.lenth >= 6) {
+            this.phoneList = res.list(0, 6);
+          }
+          else{
           this.phoneList = res.list;
-          console.log(this.phoneList);
+
+          }
         });
     },
+    goToCart(){
+      this.$router.push('/cart')
+    }
   },
 };
 </script>
