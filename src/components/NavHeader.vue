@@ -148,13 +148,10 @@ export default {
           },
         })
         .then((res) => {
-          if (res.list.lenth >= 6) {
-            this.phoneList = res.list(0, 6);
-          }
-          else{
+          
           this.phoneList = res.list;
 
-          }
+          
         });
     },
     goToCart(){
@@ -254,7 +251,7 @@ export default {
           }
           .children {
             position: absolute;
-            top: 112px;
+            top:100px;
             left: 0;
             height: 0;
             opacity: 0;
