@@ -110,7 +110,13 @@
       </div>
     </div>
     <ServiceBar></ServiceBar>
-    <modal title="提示" sureText='查看购物车' btnType="1"></modal>
+    <modal title="提示" sureText='查看购物车' btnType="1" modalType="middle" :showModal='true'
+    >
+    <!-- 使用插槽 -->
+    <template v-slot:body>
+      <p>添加成功</p>
+    </template>
+    </modal>
   </div>
 </template>
 <script>
