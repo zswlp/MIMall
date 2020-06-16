@@ -12,6 +12,8 @@
           <div class="swiper-pagination" slot="pagination"></div>
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
+          <!-- 如果需要滚动条 -->
+          <div class="swiper-scrollbar"></div>
         </swiper>
       </div>
       <div class="ads-box"></div>
@@ -33,15 +35,35 @@ export default {
   data() {
     return {
       swiperOptions: {
-        pagination: {
-          autoplay:true,
-          loop:true,
-          el: ".swiper-pagination",
+        autoplay: true,
+        //是否可循环
+        loop: true,
+        //  设置切换效果
+        effect: "cube",
+        cubeEffect: {
+          // 开启slide阴影。默认 true。
+          slideShadows: true,
+          // 开启投影。默认 true
+          shadow: true,
+          // 投影距离，默认20
+          shadowOffset: 100,
+          //
+          shadowScale: 0.6,
         },
-         navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+        pagination: {
+          el: ".swiper-pagination",
+          // 设置分页器能点击切换
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
+
+      // 如果需要滚动条
+      scrollbar: {
+        el: ".swiper-scrollbar",
       },
       slideList: [
         {
