@@ -4,19 +4,14 @@ import router from './router'
 import App from './App.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-// 使用swiper
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-// import style
-import 'swiper/css/swiper.css'
-Vue.use(VueAwesomeSwiper, /* { default options with global component } */ )
-    // import env from "./env"
-    // mock
-    // 定义开关
-    // const mock = false;
-    // if (mock) {
-    //     require('./mock/api')
-    // }
-    // 根据前端的跨域方式做调整
+// import env from "./env"
+// mock
+// 定义开关
+// const mock = false;
+// if (mock) {
+//     require('./mock/api')
+// }
+// 根据前端的跨域方式做调整
 axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
 // 拦截器
