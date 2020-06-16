@@ -2,6 +2,58 @@
   <div class="index">
     <div class="container">
       <div class="swiper-box">
+        <div class="nav-menu">
+          <ul class="menu-warp">
+            <li class="menu-item">
+              <a href="javascript:;">
+                手机 电话卡
+                <div class="chlidren"></div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">
+                电视 盒子
+                <div class="chlidren"></div>
+              </a>
+            </li>
+              <li class="menu-item">
+              <a href="javascript:;">
+                笔记本 平板
+                <div class="chlidren"></div>
+              </a>
+            </li>
+              <li class="menu-item">
+              <a href="javascript:;">
+                家电 插线板
+                <div class="chlidren"></div>
+              </a>
+            </li>
+              <li class="menu-item">
+              <a href="javascript:;">
+                出行 穿戴
+                <div class="chlidren"></div>
+              </a>
+            </li>
+              <li class="menu-item">
+              <a href="javascript:;">
+                智能 路由器
+                <div class="chlidren"></div>
+              </a>
+            </li>
+              <li class="menu-item">
+              <a href="javascript:;">
+                电源 配件
+                <div class="chlidren"></div>
+              </a>
+            </li>
+              <li class="menu-item">
+              <a href="javascript:;">
+               生活 箱包
+                <div class="chlidren"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <swiper v-bind:options="swiperOptions">
           <swiper-slide v-for="(item, index) in slideList" v-bind:key="index">
             <a v-bind:href="'/#/product/' + item.id"
