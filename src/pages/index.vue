@@ -110,11 +110,13 @@
       </div>
     </div>
     <ServiceBar></ServiceBar>
+    <modal title="提示" sureText='查看购物车' btnType="1"></modal>
   </div>
 </template>
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import ServiceBar from "./../components/ServiceBar";
+import Modal from "./../components/Modal";
 import "swiper/css/swiper.css";
 export default {
   name: "index",
@@ -122,6 +124,7 @@ export default {
     Swiper,
     SwiperSlide,
     ServiceBar,
+     Modal,
   },
   data() {
     return {
